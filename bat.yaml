@@ -1,0 +1,11 @@
+suite:
+  name: "Shippigns System BAT"
+
+files:
+  - file: tests/getShippings.dwl
+
+reporters:
+  - type: HTML
+    outFile: ./reports/HTML.html
+  - type: JSON
+    outFile: ./reports/JSON.json
