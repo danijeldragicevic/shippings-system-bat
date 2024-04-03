@@ -1,11 +1,17 @@
 suite:
-  name: "Shippigns System BAT"
+  name: "Shippings System BAT"
 
 files:
-  - file: tests/getShippings.dwl
+  - file: tests/Shippings.dwl
+  - file: tests/ShippingsById.dwl
+  - file: tests/QoS.dwl
 
 reporters:
   - type: HTML
-    outFile: ./reports/HTML.html
-  - type: JSON
-    outFile: ./reports/JSON.json
+    outFile: reports/Report.html
+  - type: Local
+    file: reporter/ReportCreator.dwl
+    outFile: reports/Report.json
+  - type: Email
+    options:
+      EMAILS: shippings.system.bat@gmail.com
