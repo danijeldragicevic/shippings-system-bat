@@ -20,9 +20,17 @@
         },
         {
           "test": "get shippings where name like",
-          "pass": false,
+          "pass": true,
           "requests": [
             "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings?match=like&name=Jerry"
+          ]
+        },
+        {
+          "test": "create new shipping",
+          "pass": true,
+          "requests": [
+            "POST https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",
+            "DELETE https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings/117"
           ]
         }
       ]
@@ -32,9 +40,27 @@
       "results": [
         {
           "test": "get shipping by id",
-          "pass": false,
+          "pass": true,
           "requests": [
-            "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings"
+            "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",
+            "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings/1"
+          ]
+        },
+        {
+          "test": "update shipping by id",
+          "pass": true,
+          "requests": [
+            "POST https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",
+            "PUT https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings/118",
+            "DELETE https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings/118"
+          ]
+        },
+        {
+          "test": "delete shipping by id",
+          "pass": true,
+          "requests": [
+            "POST https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",
+            "DELETE https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings/119"
           ]
         }
       ]
@@ -44,7 +70,7 @@
       "results": [
         {
           "test": "reach quota limit",
-          "pass": true,
+          "pass": false,
           "requests": [
             "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",
             "GET https://shippings-system-proxy-i11pud.5sc6y6-3.usa-e2.cloudhub.io/api/shippings",

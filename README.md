@@ -126,7 +126,7 @@ WARNING: Email reporter only works when the test is executed in Anypoint Platfor
 ```
 
 This test suite also uses Github Actions CI/CD, where it is instructed to run the tests on a scheduled basis and/or with each new commit against the "main" branch.
-CI/CD runs tests against Shipping System Appliction deployed on Anypoint Platform's Runtime Manager (CH1).
+CI/CD runs tests against Shipping System Application, deployed on Anypoint Platform's Runtime Manager (CH2).
 
 Details about CI/CD configurations can be seen in ".github/workflows/build.yml" file.
 
