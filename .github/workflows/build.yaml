@@ -1,9 +1,6 @@
 name: Run BAT tests
 
 on:
-  # At the end of every day
-  schedule:
-    - cron: "0 0 * * *"
   push:
     branches: [ main ]
   pull_request:
