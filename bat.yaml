@@ -14,4 +14,4 @@ reporters:
     outFile: reports/Report.json
   - type: Email
     options:
-      EMAILS: shippings.system.bat@gmail.com
+      EMAILS: dev.danijel.dragicevic@gmail.com
